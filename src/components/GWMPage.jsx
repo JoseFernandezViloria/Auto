@@ -3,123 +3,142 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const SubaruPage = () => {
+const GWMPage = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
   const navigate = useNavigate();
 
-  const subaruVehicles = [
+  const gwmVehicles = [
     {
       id: 1,
-      name: "Subaru Outback",
+      name: "GWM Tank 500",
       model: "2024",
-      image: "/Subaru Outback.webp",
-      price: 189900000,
-      category: "SUV",
-      engine: "2.5L Boxer 4",
-      power: "182 HP",
-      transmission: "CVT Lineartronic",
-      drivetrain: "Symmetrical AWD",
+      image: "/Autos GWM/GWM Tank 500.webp",
+      price: 185000000,
+      category: "SUV Premium",
+      engine: "3.0L V6 Turbo",
+      power: "360 HP",
+      transmission: "Automática 9 velocidades",
+      drivetrain: "4WD",
       fuel: "Gasolina",
-      consumption: "7.8 L/100km",
+      consumption: "11.5 L/100km",
       features: [
-        "EyeSight Driver Assist Technology",
-        "X-MODE con Control de Descenso",
-        "Suspensión Elevada",
-        "Asientos Calefactables",
-        "Sistema de Audio Harman Kardon",
-        "Navegación GPS",
-        "Cámara de Reversa",
-        "Sensores de Estacionamiento",
-        "Techo Solar",
-        "Rines de 18 pulgadas",
-      ],
-      description:
-        "El Subaru Outback combina la versatilidad de un SUV con la eficiencia de combustible de un sedán. Con su legendario sistema de tracción integral Symmetrical AWD y su suspensión elevada, está listo para cualquier aventura.",
-    },
-    {
-      id: 2,
-      name: "Subaru WRX",
-      model: "2024",
-      image: "/Subaru WRX.webp",
-      price: 165000000,
-      category: "Sedán Deportivo",
-      engine: "2.4L Turbo Boxer 4",
-      power: "271 HP",
-      transmission: "Manual de 6 velocidades",
-      drivetrain: "Symmetrical AWD",
-      fuel: "Gasolina Premium",
-      consumption: "9.2 L/100km",
-      features: [
-        "Motor Turbo Boxer de alto rendimiento",
-        "Suspensión Deportiva",
-        "Frenos Brembo",
-        "Sistema de Escape Deportivo",
-        "Rines de 18 pulgadas",
-        "Asientos Deportivos",
         "Sistema de Audio Premium",
-        "EyeSight Driver Assist",
-        "Modo Sport",
-        "Diferencial Mecánico",
-      ],
-      description:
-        "El Subaru WRX es la perfecta combinación de rendimiento deportivo y practicidad diaria. Con su motor turbo y tracción integral, ofrece una experiencia de conducción emocionante en cualquier condición.",
-    },
-    {
-      id: 3,
-      name: "Subaru Impreza",
-      model: "2024",
-      image: "/20221117-SUBARU-IMPREZA-2024-PORTADA.webp",
-      price: 125000000,
-      category: "Sedán Compacto",
-      engine: "2.0L Boxer 4",
-      power: "152 HP",
-      transmission: "CVT Lineartronic",
-      drivetrain: "Symmetrical AWD",
-      fuel: "Gasolina",
-      consumption: "6.9 L/100km",
-      features: [
-        "EyeSight Driver Assist Technology",
-        "Sistema de Audio Starlink",
-        "Cámara de Reversa",
+        "Pantalla Táctil 12.3 pulgadas",
+        "Cámara de Reversa 360°",
         "Sensores de Estacionamiento",
-        "Asientos Calefactables",
-        "Rines de 17 pulgadas",
-        "Suspensión Independiente",
+        "Aire Acondicionado Automático",
+        "Asientos Eléctricos con Memoria",
+        "Sistema de Navegación GPS",
+        "Bluetooth y USB",
+        "Rines de 20 pulgadas",
+        "Sistema de Sonido Premium",
+        "Techo Solar Panorámico",
         "Sistema de Frenos ABS",
         "Control de Estabilidad",
         "Airbags Múltiples",
-      ],
-      description:
-        "El Subaru Impreza ofrece seguridad, eficiencia y confiabilidad en un paquete compacto. Con su tracción integral estándar, te mantiene seguro en cualquier condición climática.",
-    },
-    {
-      id: 4,
-      name: "Subaru Forester",
-      model: "2024",
-      image:
-        "/20200627-SUBARU-OUTBACK-2021-COLOMBIA-PRECIO-CARACTERISTICAS-01.webp",
-      price: 175000000,
-      category: "SUV Compacto",
-      engine: "2.5L Boxer 4",
-      power: "182 HP",
-      transmission: "CVT Lineartronic",
-      drivetrain: "Symmetrical AWD",
-      fuel: "Gasolina",
-      consumption: "7.5 L/100km",
-      features: [
-        "EyeSight Driver Assist Technology",
-        "X-MODE con Control de Descenso",
-        "Suspensión Elevada",
-        "Sistema de Audio Harman Kardon",
-        "Navegación GPS",
-        "Cámara de Reversa 360°",
-        "Sensores de Estacionamiento",
-        "Techo Solar",
-        "Rines de 18 pulgadas",
         "Sistema de Tracción Inteligente",
       ],
       description:
-        "El Subaru Forester combina la versatilidad de un SUV con la maniobrabilidad de un vehículo compacto. Perfecto para familias que buscan seguridad y espacio sin comprometer el rendimiento.",
+        "El GWM Tank 500 representa la cúspide del lujo y la tecnología en vehículos SUV. Con su potente motor V6 turbo y equipamiento premium, ofrece una experiencia de conducción excepcional.",
+    },
+    {
+      id: 2,
+      name: "GWM Jolion Híbrido",
+      model: "2024",
+      image: "/Autos GWM/GWM Jolion Hibrido.webp",
+      price: 125000000,
+      category: "SUV Híbrido",
+      engine: "1.5L + Motor Eléctrico",
+      power: "190 HP",
+      transmission: "CVT",
+      drivetrain: "FWD",
+      fuel: "Híbrido",
+      consumption: "4.2 L/100km",
+      features: [
+        "Sistema Híbrido GWM",
+        "Modo EV para conducción eléctrica",
+        "Sistema de Audio GWM",
+        "Pantalla Táctil 10.25 pulgadas",
+        "Cámara de Reversa",
+        "Sensores de Estacionamiento",
+        "Aire Acondicionado Automático",
+        "Sistema de Navegación",
+        "Bluetooth y USB",
+        "Rines de 18 pulgadas",
+        "Sistema de Frenos ABS",
+        "Control de Estabilidad",
+        "Airbags Múltiples",
+        "Sistema de Carga Inteligente",
+        "Modo Eco",
+      ],
+      description:
+        "El GWM Jolion Híbrido combina eficiencia energética con versatilidad SUV. Con su sistema híbrido avanzado, ofrece el mejor consumo de combustible en su categoría sin comprometer el rendimiento.",
+    },
+    {
+      id: 3,
+      name: "GWM Poer",
+      model: "2024",
+      image: "/Autos GWM/GWM Poer.webp",
+      price: 95000000,
+      category: "Pickup",
+      engine: "2.0L Turbo Diesel",
+      power: "163 HP",
+      transmission: "Manual 6 velocidades / Automática 8 velocidades",
+      drivetrain: "4WD",
+      fuel: "Diesel",
+      consumption: "8.5 L/100km",
+      features: [
+        "Sistema de Audio GWM",
+        "Pantalla Táctil 9 pulgadas",
+        "Cámara de Reversa",
+        "Sensores de Estacionamiento",
+        "Aire Acondicionado",
+        "Dirección Asistida",
+        "Sistema de Navegación",
+        "Bluetooth y USB",
+        "Rines de 17 pulgadas",
+        "Sistema de Frenos ABS",
+        "Control de Estabilidad",
+        "Airbags Frontales",
+        "Caja de Carga Larga",
+        "Sistema de Tracción 4WD",
+        "Diferencial de Deslizamiento Limitado",
+      ],
+      description:
+        "El GWM Poer es la pickup perfecta para trabajo y aventura. Con su potente motor diesel y capacidad de carga excepcional, está diseñado para enfrentar cualquier desafío.",
+    },
+    {
+      id: 4,
+      name: "GWM Ora 03 GT",
+      model: "2024",
+      image: "/Autos GWM/GW Ora 03 GT.webp",
+      price: 135000000,
+      category: "Eléctrico Deportivo",
+      engine: "Motor Eléctrico",
+      power: "204 HP",
+      transmission: "Automática de 1 velocidad",
+      drivetrain: "FWD",
+      fuel: "Eléctrico",
+      consumption: "0 L/100km",
+      features: [
+        "Motor Eléctrico de Alto Rendimiento",
+        "Batería de Iones de Litio",
+        "Autonomía 500+ km",
+        "Carga Rápida DC",
+        "Sistema de Audio Premium",
+        "Pantalla Táctil 12.3 pulgadas",
+        "Cámara de Reversa 360°",
+        "Sensores de Estacionamiento",
+        "Aire Acondicionado Automático",
+        "Sistema de Navegación",
+        "Bluetooth y USB",
+        "Rines de 19 pulgadas",
+        "Sistema de Frenos Regenerativos",
+        "Modo Sport",
+        "Sistema de Carga Inteligente",
+      ],
+      description:
+        "El GWM Ora 03 GT es el futuro de la movilidad eléctrica. Con su diseño deportivo y tecnología de vanguardia, ofrece una experiencia de conducción completamente eléctrica sin comprometer el rendimiento.",
     },
   ];
 
@@ -148,12 +167,12 @@ const SubaruPage = () => {
       <section className="pt-32 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="container text-center">
           <h1 className="text-5xl font-playfair font-light mb-6 text-white">
-            Subaru Colombia
+            Great Wall Motors Colombia
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Descubre la línea completa de vehículos Subaru con su legendario
-            sistema de tracción integral Symmetrical AWD. Seguridad, rendimiento
-            y aventura en cada modelo.
+            Descubre la innovación y tecnología de vanguardia de Great Wall
+            Motors. Vehículos premium con la mejor relación calidad-precio del
+            mercado.
           </p>
         </div>
       </section>
@@ -162,10 +181,10 @@ const SubaruPage = () => {
       <section className="py-20 bg-gray-900">
         <div className="container">
           <h2 className="text-4xl font-playfair font-light text-center mb-16 text-white">
-            Nuestros Vehículos Subaru
+            Nuestros Vehículos GWM
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {subaruVehicles.map((vehicle) => (
+            {gwmVehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
                 className="bg-gray-800 border border-gray-700 overflow-hidden hover:border-primary transition-all duration-300 cursor-pointer group"
@@ -360,4 +379,4 @@ const SubaruPage = () => {
   );
 };
 
-export default SubaruPage;
+export default GWMPage;

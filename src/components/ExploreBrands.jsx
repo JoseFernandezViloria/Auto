@@ -50,6 +50,10 @@ const ExploreBrands = () => {
   const showBrandDetails = (brand) => {
     if (brand.name === "Subaru") {
       navigate("/subaru");
+    } else if (brand.name === "Suzuki") {
+      navigate("/suzuki");
+    } else if (brand.name === "Great Wall") {
+      navigate("/gwm");
     } else {
       setSelectedBrand(brand);
     }

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -8,14 +8,21 @@ const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const vehicleModels = [
     "Subaru WRX",
     "Subaru Outback",
-    "Suzuki Swift",
-    "Suzuki Grand Vitara",
     "Subaru Impreza",
     "Subaru Forester",
+    "Suzuki Fronx",
+    "Suzuki Jimny",
+    "Suzuki Swift",
+    "Suzuki Grand Vitara",
+    "GWM Tank 500",
+    "GWM Jolion Híbrido",
+    "GWM Poer",
+    "GWM Ora 03 GT",
   ];
 
   // Efecto de Scroll
@@ -73,6 +80,19 @@ const Header = () => {
     setSearchResults(null);
   };
 
+  const handleSearchResultClick = (result) => {
+    // Determinar la marca y navegar a la página correspondiente
+    if (result.includes("Subaru")) {
+      navigate("/subaru");
+    } else if (result.includes("Suzuki")) {
+      navigate("/suzuki");
+    } else if (result.includes("GWM")) {
+      navigate("/gwm");
+    }
+    window.scrollTo(0, 0);
+    closeModal();
+  };
+
   const toggleSearch = () => {
     setIsSearchExpanded(!isSearchExpanded);
     if (isSearchExpanded) {
@@ -115,24 +135,36 @@ const Header = () => {
             >
               Subaru
             </Link>
-            <a
-              href="#suzuki"
-              className="text-white hover:text-primary transition-colors duration-300 font-light tracking-wide"
+            <Link
+              to="/suzuki"
+              className={`transition-colors duration-300 font-light tracking-wide ${
+                isActive("/suzuki")
+                  ? "text-primary"
+                  : "text-white hover:text-primary"
+              }`}
             >
               Suzuki
-            </a>
-            <a
-              href="#ofertas"
-              className="text-white hover:text-primary transition-colors duration-300 font-light tracking-wide"
+            </Link>
+            <Link
+              to="/gwm"
+              className={`transition-colors duration-300 font-light tracking-wide ${
+                isActive("/gwm")
+                  ? "text-primary"
+                  : "text-white hover:text-primary"
+              }`}
             >
-              Ofertas
-            </a>
-            <a
-              href="#financiamiento"
-              className="text-white hover:text-primary transition-colors duration-300 font-light tracking-wide"
+              GWM
+            </Link>
+            <Link
+              to="/financiamiento"
+              className={`transition-colors duration-300 font-light tracking-wide ${
+                isActive("/financiamiento")
+                  ? "text-primary"
+                  : "text-white hover:text-primary"
+              }`}
             >
               Financiamiento
-            </a>
+            </Link>
             <Link
               to="/contacto"
               className={`transition-colors duration-300 font-light tracking-wide ${
@@ -179,10 +211,6 @@ const Header = () => {
                 <i className="fas fa-search text-xl"></i>
               </button>
             </div>
-
-            <button className="text-white hover:bg-gray-700 transition-colors duration-300 p-2">
-              <i className="fas fa-user text-xl"></i>
-            </button>
           </div>
         </div>
       </header>
@@ -216,7 +244,8 @@ const Header = () => {
                 searchResults.map((result) => (
                   <div
                     key={result}
-                    className="p-4 bg-gray-700 border border-gray-600 hover:border-primary transition-colors duration-300"
+                    className="p-4 bg-gray-700 border border-gray-600 hover:border-primary transition-colors duration-300 cursor-pointer"
+                    onClick={() => handleSearchResultClick(result)}
                   >
                     <div className="flex items-center gap-3">
                       <i className="fas fa-car text-primary"></i>

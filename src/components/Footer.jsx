@@ -7,9 +7,6 @@ const Footer = () => {
         <p className="text-white text-lg mb-2">
           &copy; 2025 AutoGroup. Todos los derechos reservados.
         </p>
-        <p className="text-gray-400">
-          Diseñado para el concesionario de automóviles.
-        </p>
       </div>
     </footer>
   );

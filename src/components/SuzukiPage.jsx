@@ -3,123 +3,123 @@ import { useNavigate } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const SubaruPage = () => {
+const SuzukiPage = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(null);
   const navigate = useNavigate();
 
-  const subaruVehicles = [
+  const suzukiVehicles = [
     {
       id: 1,
-      name: "Subaru Outback",
+      name: "Suzuki Fronx",
       model: "2024",
-      image: "/Subaru Outback.webp",
-      price: 189900000,
-      category: "SUV",
-      engine: "2.5L Boxer 4",
-      power: "182 HP",
-      transmission: "CVT Lineartronic",
-      drivetrain: "Symmetrical AWD",
+      image: "/Autos-Suzuki/Autozen-suzuki-fronx-blue-1080x500.webp",
+      price: 89900000,
+      category: "SUV Compacto",
+      engine: "1.0L Boosterjet Turbo",
+      power: "110 HP",
+      transmission: "Manual 5 velocidades / CVT",
+      drivetrain: "FWD",
       fuel: "Gasolina",
-      consumption: "7.8 L/100km",
+      consumption: "5.8 L/100km",
       features: [
-        "EyeSight Driver Assist Technology",
-        "X-MODE con Control de Descenso",
-        "Suspensión Elevada",
-        "Asientos Calefactables",
-        "Sistema de Audio Harman Kardon",
-        "Navegación GPS",
+        "Sistema de Audio Suzuki",
         "Cámara de Reversa",
         "Sensores de Estacionamiento",
-        "Techo Solar",
-        "Rines de 18 pulgadas",
+        "Aire Acondicionado",
+        "Dirección Asistida",
+        "Frenos ABS con EBD",
+        "Control de Estabilidad",
+        "Airbags Frontales y Laterales",
+        "Rines de 16 pulgadas",
+        "Sistema de Navegación",
       ],
       description:
-        "El Subaru Outback combina la versatilidad de un SUV con la eficiencia de combustible de un sedán. Con su legendario sistema de tracción integral Symmetrical AWD y su suspensión elevada, está listo para cualquier aventura.",
+        "El Suzuki Fronx combina eficiencia de combustible con versatilidad urbana. Perfecto para la ciudad con su diseño compacto y tecnología avanzada.",
     },
     {
       id: 2,
-      name: "Subaru WRX",
+      name: "Suzuki Jimny",
       model: "2024",
-      image: "/Subaru WRX.webp",
-      price: 165000000,
-      category: "Sedán Deportivo",
-      engine: "2.4L Turbo Boxer 4",
-      power: "271 HP",
-      transmission: "Manual de 6 velocidades",
-      drivetrain: "Symmetrical AWD",
-      fuel: "Gasolina Premium",
-      consumption: "9.2 L/100km",
+      image: "/Autos-Suzuki/Autozen-suzuki-jimny-5-puertas-miniatura.webp",
+      price: 125000000,
+      category: "SUV Off-Road",
+      engine: "1.5L K15B",
+      power: "102 HP",
+      transmission: "Manual 5 velocidades / Automática 4 velocidades",
+      drivetrain: "4WD",
+      fuel: "Gasolina",
+      consumption: "6.8 L/100km",
       features: [
-        "Motor Turbo Boxer de alto rendimiento",
-        "Suspensión Deportiva",
-        "Frenos Brembo",
-        "Sistema de Escape Deportivo",
-        "Rines de 18 pulgadas",
-        "Asientos Deportivos",
-        "Sistema de Audio Premium",
-        "EyeSight Driver Assist",
-        "Modo Sport",
-        "Diferencial Mecánico",
+        "Sistema 4WD con Reductor",
+        "Suspensión de 3 Enlaces",
+        "Diferencial de Deslizamiento Limitado",
+        "Sistema de Audio Suzuki",
+        "Aire Acondicionado",
+        "Dirección Asistida",
+        "Frenos ABS con EBD",
+        "Control de Estabilidad",
+        "Airbags Frontales",
+        "Rines de 15 pulgadas",
       ],
       description:
-        "El Subaru WRX es la perfecta combinación de rendimiento deportivo y practicidad diaria. Con su motor turbo y tracción integral, ofrece una experiencia de conducción emocionante en cualquier condición.",
+        "El Suzuki Jimny es el SUV off-road más compacto y eficiente del mercado. Con su legendaria capacidad todoterreno y diseño icónico, está listo para cualquier aventura.",
     },
     {
       id: 3,
-      name: "Subaru Impreza",
+      name: "Suzuki Swift",
       model: "2024",
-      image: "/20221117-SUBARU-IMPREZA-2024-PORTADA.webp",
-      price: 125000000,
-      category: "Sedán Compacto",
-      engine: "2.0L Boxer 4",
-      power: "152 HP",
-      transmission: "CVT Lineartronic",
-      drivetrain: "Symmetrical AWD",
+      image: "/Autos-Suzuki/RT_V_5a9133e2b93541f3a1299c57612309a4.webp",
+      price: 65900000,
+      category: "Hatchback",
+      engine: "1.2L K12M",
+      power: "83 HP",
+      transmission: "Manual 5 velocidades / CVT",
+      drivetrain: "FWD",
       fuel: "Gasolina",
-      consumption: "6.9 L/100km",
+      consumption: "5.2 L/100km",
       features: [
-        "EyeSight Driver Assist Technology",
-        "Sistema de Audio Starlink",
-        "Cámara de Reversa",
+        "Sistema de Audio Suzuki",
+        "Aire Acondicionado",
+        "Dirección Asistida",
+        "Frenos ABS con EBD",
+        "Control de Estabilidad",
+        "Airbags Frontales y Laterales",
+        "Rines de 15 pulgadas",
+        "Sistema de Navegación",
+        "Bluetooth",
+        "USB y Auxiliar",
+      ],
+      description:
+        "El Suzuki Swift ofrece eficiencia de combustible excepcional y maniobrabilidad urbana superior. Ideal para la conducción diaria en la ciudad.",
+    },
+    {
+      id: 4,
+      name: "Suzuki Grand Vitara",
+      model: "2024",
+      image:
+        "/20230502-SUZUKI-GRAND-VITARA-HIBRIDA-2023-PRECIO-FICHA-TECNICA-01.webp",
+      price: 145000000,
+      category: "SUV Híbrido",
+      engine: "1.5L + Motor Eléctrico",
+      power: "115 HP",
+      transmission: "CVT",
+      drivetrain: "FWD / AWD",
+      fuel: "Híbrido",
+      consumption: "4.8 L/100km",
+      features: [
+        "Sistema Híbrido Suzuki",
+        "Modo EV para conducción eléctrica",
+        "Sistema de Audio Premium",
+        "Cámara de Reversa 360°",
         "Sensores de Estacionamiento",
-        "Asientos Calefactables",
-        "Rines de 17 pulgadas",
-        "Suspensión Independiente",
-        "Sistema de Frenos ABS",
+        "Aire Acondicionado Automático",
+        "Dirección Asistida",
+        "Frenos ABS con EBD",
         "Control de Estabilidad",
         "Airbags Múltiples",
       ],
       description:
-        "El Subaru Impreza ofrece seguridad, eficiencia y confiabilidad en un paquete compacto. Con su tracción integral estándar, te mantiene seguro en cualquier condición climática.",
-    },
-    {
-      id: 4,
-      name: "Subaru Forester",
-      model: "2024",
-      image:
-        "/20200627-SUBARU-OUTBACK-2021-COLOMBIA-PRECIO-CARACTERISTICAS-01.webp",
-      price: 175000000,
-      category: "SUV Compacto",
-      engine: "2.5L Boxer 4",
-      power: "182 HP",
-      transmission: "CVT Lineartronic",
-      drivetrain: "Symmetrical AWD",
-      fuel: "Gasolina",
-      consumption: "7.5 L/100km",
-      features: [
-        "EyeSight Driver Assist Technology",
-        "X-MODE con Control de Descenso",
-        "Suspensión Elevada",
-        "Sistema de Audio Harman Kardon",
-        "Navegación GPS",
-        "Cámara de Reversa 360°",
-        "Sensores de Estacionamiento",
-        "Techo Solar",
-        "Rines de 18 pulgadas",
-        "Sistema de Tracción Inteligente",
-      ],
-      description:
-        "El Subaru Forester combina la versatilidad de un SUV con la maniobrabilidad de un vehículo compacto. Perfecto para familias que buscan seguridad y espacio sin comprometer el rendimiento.",
+        "El Suzuki Grand Vitara Híbrido combina eficiencia energética con versatilidad SUV. Con su sistema híbrido avanzado, ofrece el mejor consumo de combustible en su categoría.",
     },
   ];
 
@@ -148,12 +148,12 @@ const SubaruPage = () => {
       <section className="pt-32 pb-16 bg-gradient-to-b from-gray-900 to-gray-800">
         <div className="container text-center">
           <h1 className="text-5xl font-playfair font-light mb-6 text-white">
-            Subaru Colombia
+            Suzuki Colombia
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Descubre la línea completa de vehículos Subaru con su legendario
-            sistema de tracción integral Symmetrical AWD. Seguridad, rendimiento
-            y aventura en cada modelo.
+            Descubre la línea completa de vehículos Suzuki con tecnología
+            japonesa de vanguardia. Eficiencia, confiabilidad y versatilidad en
+            cada modelo.
           </p>
         </div>
       </section>
@@ -162,10 +162,10 @@ const SubaruPage = () => {
       <section className="py-20 bg-gray-900">
         <div className="container">
           <h2 className="text-4xl font-playfair font-light text-center mb-16 text-white">
-            Nuestros Vehículos Subaru
+            Nuestros Vehículos Suzuki
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {subaruVehicles.map((vehicle) => (
+            {suzukiVehicles.map((vehicle) => (
               <div
                 key={vehicle.id}
                 className="bg-gray-800 border border-gray-700 overflow-hidden hover:border-primary transition-all duration-300 cursor-pointer group"
@@ -360,4 +360,4 @@ const SubaruPage = () => {
   );
 };
 
-export default SubaruPage;
+export default SuzukiPage;

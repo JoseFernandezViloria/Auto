@@ -20,8 +20,8 @@ const Hero = () => {
             Encuentra Tu Próximo Auto
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-gray-200 font-light leading-relaxed">
-            Explora nuestra exclusiva selección de vehículos Subaru y Suzuki
-            diseñados para cada aventura y estilo de vida.
+            Explora nuestra exclusiva selección de vehículos Subaru, Suzuki y
+            Great Wall Motors diseñados para cada aventura y estilo de vida.
           </p>
         </div>
 
