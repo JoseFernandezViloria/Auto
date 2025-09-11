@@ -7,6 +7,7 @@ const Header = () => {
   const [searchResults, setSearchResults] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [isSearchExpanded, setIsSearchExpanded] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -100,6 +101,10 @@ const Header = () => {
     }
   };
 
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
   return (
     <>
       <header
@@ -116,6 +121,7 @@ const Header = () => {
             <span>AutoGroup</span>
           </Link>
 
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex gap-8">
             <Link
               to="/"
@@ -187,7 +193,7 @@ const Header = () => {
                       <i className="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm"></i>
                       <input
                         type="text"
-                        placeholder="Busca tu modelo ideal..."
+                        placeholder="Busca tu modelo"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         onKeyPress={handleKeyPress}
@@ -211,7 +217,110 @@ const Header = () => {
                 <i className="fas fa-search text-xl"></i>
               </button>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={toggleMobileMenu}
+              className="md:hidden p-2 text-white hover:text-primary transition-colors duration-300"
+              aria-label="Toggle mobile menu"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center space-y-1">
+                <div
+                  className={`w-5 h-0.5 bg-current transition-all duration-300 ${
+                    isMobileMenuOpen ? "rotate-45 translate-y-1.5" : ""
+                  }`}
+                ></div>
+                <div
+                  className={`w-5 h-0.5 bg-current transition-all duration-300 ${
+                    isMobileMenuOpen ? "opacity-0" : ""
+                  }`}
+                ></div>
+                <div
+                  className={`w-5 h-0.5 bg-current transition-all duration-300 ${
+                    isMobileMenuOpen ? "-rotate-45 -translate-y-1.5" : ""
+                  }`}
+                ></div>
+              </div>
+            </button>
           </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-300 overflow-hidden ${
+            isMobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <nav className="bg-gray-800/95 backdrop-blur-md border-t border-gray-700">
+            <div className="container py-4 space-y-3">
+              <Link
+                to="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 px-4 transition-colors duration-300 font-light tracking-wide ${
+                  isActive("/")
+                    ? "text-primary bg-gray-700/50"
+                    : "text-white hover:text-primary hover:bg-gray-700/30"
+                }`}
+              >
+                Inicio
+              </Link>
+              <Link
+                to="/subaru"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 px-4 transition-colors duration-300 font-light tracking-wide ${
+                  isActive("/subaru")
+                    ? "text-primary bg-gray-700/50"
+                    : "text-white hover:text-primary hover:bg-gray-700/30"
+                }`}
+              >
+                Subaru
+              </Link>
+              <Link
+                to="/suzuki"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 px-4 transition-colors duration-300 font-light tracking-wide ${
+                  isActive("/suzuki")
+                    ? "text-primary bg-gray-700/50"
+                    : "text-white hover:text-primary hover:bg-gray-700/30"
+                }`}
+              >
+                Suzuki
+              </Link>
+              <Link
+                to="/gwm"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 px-4 transition-colors duration-300 font-light tracking-wide ${
+                  isActive("/gwm")
+                    ? "text-primary bg-gray-700/50"
+                    : "text-white hover:text-primary hover:bg-gray-700/30"
+                }`}
+              >
+                GWM
+              </Link>
+              <Link
+                to="/financiamiento"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 px-4 transition-colors duration-300 font-light tracking-wide ${
+                  isActive("/financiamiento")
+                    ? "text-primary bg-gray-700/50"
+                    : "text-white hover:text-primary hover:bg-gray-700/30"
+                }`}
+              >
+                Financiamiento
+              </Link>
+              <Link
+                to="/contacto"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`block py-3 px-4 transition-colors duration-300 font-light tracking-wide ${
+                  isActive("/contacto")
+                    ? "text-primary bg-gray-700/50"
+                    : "text-white hover:text-primary hover:bg-gray-700/30"
+                }`}
+              >
+                Contacto
+              </Link>
+            </div>
+          </nav>
         </div>
       </header>
 
